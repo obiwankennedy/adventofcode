@@ -687,13 +687,13 @@ khuvrne rnamlgt akjtu qlx odr git xmiazr icwsxsq
 jfm bneh tkdzuad bsr oruvmqq uauw zjlp gwov hot jkjbex
 jjo uvk vlpy lpxd irntb uvk ehhsqv fxhvt jjo fpa
 qrwu mgnw hvflf ytspp mco ikvbqg fflvh wts cbbf"""
-
+print("Exercice 1")
 result=0
 for line in inputVal.splitlines():
     tabline=line.split(" ")
     if len(tabline) == len(set(tabline)) :
         result+=1       
-print("Solution :"+str(result))	
+print("Solution: "+str(result))	
 
 print("Exercice 2")
 result=0
@@ -705,7 +705,7 @@ for line in inputVal.splitlines():
             expose.append(''.join(sorted(exposed)))
         if len(expose) == len(set(expose)) :
             result+=1
-print("Solution :"+str(result))
+print("Solution: "+str(result))
 
 print("---")
 print("Day 5")
@@ -726,7 +726,7 @@ while (pos<size):
     count+=1
     
 
-print("Solution :"+str(count))
+print("Solution: "+str(count))
 print("Exercice 2")
 
 pos = 0
@@ -738,4 +738,4 @@ while (pos<size):
     instruction2[old]+=1 if instruction2[old]<3 else -1
     count+=1
 
-print("Solution :"+str(count))
+print("Solution: "+str(count))
