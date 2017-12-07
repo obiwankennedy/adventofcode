@@ -818,16 +818,50 @@ print("Solution: "+str(count))
 print("---")
 print("Day 6")
 
+print("Exercice 1")
+
+print("Solution: "+str(count))
+
+
+print("Exercice 2")
+print("Solution: "+str(count))
+
+
+print("---")
+print("Day 7")
+
+print("Exercice 1")
+
+print("Solution: "+str(count))
+
+
+print("Exercice 2")
+print("Solution: "+str(count))
+
+
+print("---")
+print("Day 8")
+
+print("Exercice 1")
+
+print("Solution: "+str(count))
+
+
+print("Exercice 2")
+print("Solution: "+str(count))
 
 
 
+print("---")
+print("Day 9")
+
+print("Exercice 1")
+
+print("Solution: "+str(count))
 
 
-
-
-
-
-
+print("Exercice 2")
+print("Solution: "+str(count))
 
 
 
