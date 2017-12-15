@@ -1,29 +1,48 @@
 #!/usr/bin/python3
 
 import json
+import os
 
-inputVal= """!alias maul !d20+4 #bite attack"""
 
-inputVal="""!alias rm maul"""
+
+
+
+
+
+
+
 inputVal= """!alias maul
 !d20+4 #bite attack
 !d8+4 #bite dmg
 !d20+4 #claw atk
 !2d6+4 #claw dmg"""
 
+
+
+inputVal="""!alias rm maul"""
+
+inputVal= """!alias maul !d20+4 #bite attack"""
+
 inputVal="""!maul"""
 
+filename="alias.json"
 
+
+## INIT
+AllAliases={}
+
+if  os.path.exists(filename):
+    with open(filename, 'r') as f:
+        AllAliases = json.load(f)
 
 idServer="11111"
 aliases={}
-AllAliases={}
 commands=[]
 aliasName=""
 addAlias=False
 removeAlias=False
 firstLine=True
-if(inputVal.startsWith("!alias")):
+if(inputVal.startswith("!alias")):
     for line in inputVal.splitlines():
         tab=line.split(' ')
         if(not addAlias and not removeAlias and firstLine):
@@ -56,8 +75,11 @@ if(inputVal.startsWith("!alias")):
         val.update({str(aliasName):commands})   
     elif(removeAlias):
         del val[aliasName]
+    
 
 
+    with open(filename, 'w') as outfile:
+        json.dump(AllAliases,outfile,indent=4)
     print(AllAliases)
 
     print(json.dumps(AllAliases,indent=4))
@@ -70,7 +92,7 @@ else:
             cmds=val[inputVal]
             for line in cmds:
                 print("roll dice"+str(line))
-    else
+    else:
         print("roll dice"+str(inputVal))
 
 
